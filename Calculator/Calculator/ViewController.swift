@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        //Hi dfgdfg dgdg 
-        
         for button in allButtons {
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.darkGray.cgColor
