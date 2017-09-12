@@ -32,9 +32,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="153.5" height="153.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="x!"/>
+                                                <state key="normal" title="C"/>
                                                 <connections>
-                                                    <action selector="perfomOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11U-Fa-iBk"/>
+                                                    <action selector="allClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ziY-E2-Ink"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb4-si-0wO">
@@ -294,7 +294,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="256"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byl-tJ-Gmp">
-                                        <rect key="frame" x="8" y="185" width="752" height="71"/>
+                                        <rect key="frame" x="8" y="115" width="752" height="71"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="71" id="sCM-mq-03V"/>
@@ -303,11 +303,22 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njz-Sc-os0">
+                                        <rect key="frame" x="0.0" y="186" width="768" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Byl-tJ-Gmp" secondAttribute="bottom" id="3R2-yv-vjf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Byl-tJ-Gmp" secondAttribute="bottom" constant="70" id="3R2-yv-vjf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Njz-Sc-os0" secondAttribute="trailing" id="3cq-bq-5kT"/>
                                     <constraint firstAttribute="trailing" secondItem="Byl-tJ-Gmp" secondAttribute="trailing" constant="8" id="KJv-qu-7qr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Njz-Sc-os0" secondAttribute="bottom" id="WZR-NY-0ES"/>
+                                    <constraint firstItem="Njz-Sc-os0" firstAttribute="leading" secondItem="SSy-Ce-QzC" secondAttribute="leading" id="aI0-0s-q34"/>
+                                    <constraint firstItem="Njz-Sc-os0" firstAttribute="top" secondItem="Byl-tJ-Gmp" secondAttribute="bottom" id="tdV-u2-nYQ"/>
                                     <constraint firstItem="Byl-tJ-Gmp" firstAttribute="leading" secondItem="SSy-Ce-QzC" secondAttribute="leading" constant="8" id="yre-bG-Cdp"/>
                                 </constraints>
                             </view>
@@ -328,6 +339,7 @@
                     </view>
                     <connections>
                         <outlet property="display" destination="Byl-tJ-Gmp" id="GbX-W4-WVC"/>
+                        <outlet property="displayHistory" destination="Njz-Sc-os0" id="HIh-et-W5A"/>
                         <outletCollection property="allButtons" destination="E9I-CC-e4j" collectionClass="NSMutableArray" id="68z-Ke-5iB"/>
                         <outletCollection property="allButtons" destination="Wb4-si-0wO" collectionClass="NSMutableArray" id="LSd-pw-0lc"/>
                         <outletCollection property="allButtons" destination="X8D-O7-aLJ" collectionClass="NSMutableArray" id="kOH-xP-Yya"/>
@@ -357,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.375" y="35.91549295774648"/>
+            <point key="canvasLocation" x="24.21875" y="35.7421875"/>
         </scene>
     </scenes>
 </document>

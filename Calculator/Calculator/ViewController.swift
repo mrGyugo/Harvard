@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var displayHistory: UILabel!
     
     var userIsInTheMiddleOfTyping: Bool = false
     
@@ -49,6 +50,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func allClear(_ sender: Any) {
+        userIsInTheMiddleOfTyping = false
+        display.text = "0"
+        displayHistory.text = ""
+        brain.allClear()
+    }
 
     @IBAction func perfomOperation(_ sender: UIButton) {
         
@@ -59,14 +66,17 @@ class ViewController: UIViewController {
         if let mathematicalSymbol = sender.currentTitle {
            brain.performOperation(mathematicalSymbol)
         }
-        if let result = brain.result {
+        
+        
+        if let result = brain.result.accumulator {
             displayValue = result
         }
+        
+        if let historyResult = brain.result.description {
+            displayHistory.text = historyResult
+        }
+        
     }
-    
-    
-    
-    
 
     var displayValue: Double {
         set {
@@ -77,6 +87,7 @@ class ViewController: UIViewController {
         }
     }
     
+
 
 
 }

@@ -10,13 +10,13 @@ import Foundation
 
 struct CalculatorBrain {
     
-    private var accumulator: Double?
-    private var resultIsPending: Bool
-    private var description: String?
+
+    private var resultIsPending: Bool = false
+    private var mainTuple: (accumulator: Double?, description: String?)
     
     //Установить оперант
     mutating func setOperand(_ operand: Double) {
-        accumulator = operand
+        mainTuple = (operand, String(operand))
     }
     
     //Enum
@@ -31,6 +31,7 @@ struct CalculatorBrain {
     private struct PendingBinaryOperation {
         let function: (Double, Double) -> Double
         let firstOperand: Double
+        let tempDescription: String
         func perform(with secondOperand: Double) -> Double {
             return function(firstOperand, secondOperand)
         }
@@ -38,9 +39,10 @@ struct CalculatorBrain {
     
     //Доп функция для бинарной операции
     private mutating func performPendingBinaryOperation () {
-        if pendingBinaryOperation != nil && accumulator != nil {
-            accumulator = pendingBinaryOperation!.perform(with: accumulator!)
+        if pendingBinaryOperation != nil && mainTuple.accumulator != nil {
+            mainTuple = (pendingBinaryOperation!.perform(with: mainTuple.accumulator!), pendingBinaryOperation!.tempDescription + mainTuple.description!)
             pendingBinaryOperation = nil
+            resultIsPending = false
         }
     }
     
@@ -80,29 +82,41 @@ struct CalculatorBrain {
     mutating func performOperation(_ symbol: String) {
         if let operation = operations[symbol] {
             switch operation {
-            case .constant(let value):
-                accumulator = value
+            case .constant(let value): mainTuple = (value, symbol)
+   
             case .unaryOperation(let function):
-                if accumulator != nil {
-                    accumulator = function(accumulator!)
-                }
+                if mainTuple.accumulator != nil { mainTuple = (function(mainTuple.accumulator!), symbol + "(\(mainTuple.description!))")}
+                
             case .binaryOperation(let function):
-                if accumulator != nil {
+                performPendingBinaryOperation()
+                if mainTuple.accumulator != nil {
                     resultIsPending = true
-                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
-                    accumulator = nil
+                    mainTuple.description! += " \(symbol) "
+                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: mainTuple.accumulator!, tempDescription: mainTuple.description!)
+                    mainTuple.accumulator = nil
                 }
+                
             case .equals:
-                resultIsPending = true
                 performPendingBinaryOperation()
             }
         }
     }
     
+    
+    mutating func allClear () {
+        mainTuple.accumulator = nil
+        mainTuple.description = nil
+        pendingBinaryOperation = nil
+    }
+    
     //Result
-    var result: Double? {
+    var result: (accumulator:Double? , description: String?) {
         get {
-            return accumulator;
+            if resultIsPending {
+                return (mainTuple.accumulator, "\(mainTuple.description!) ...")
+            } else {
+                return (mainTuple.accumulator, "\(mainTuple.description!) =")
+            }
         }
     }
 }
