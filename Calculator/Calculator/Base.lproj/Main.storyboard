@@ -249,7 +249,7 @@
                                                 <rect key="frame" x="153.5" y="0.0" width="153.5" height="153.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="lg2"/>
+                                                <state key="normal" title="ln"/>
                                                 <connections>
                                                     <action selector="perfomOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enO-ao-axU"/>
                                                 </connections>
@@ -267,7 +267,10 @@
                                                 <rect key="frame" x="461" y="0.0" width="153.5" height="153.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title=","/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5a-1x-9yP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRm-qW-uje">
                                                 <rect key="frame" x="614.5" y="0.0" width="153.5" height="153.5"/>

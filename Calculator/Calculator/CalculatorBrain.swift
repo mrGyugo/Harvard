@@ -11,6 +11,8 @@ import Foundation
 struct CalculatorBrain {
     
     private var accumulator: Double?
+    private var resultIsPending: Bool
+    private var description: String?
     
     //Установить оперант
     mutating func setOperand(_ operand: Double) {
@@ -59,6 +61,10 @@ struct CalculatorBrain {
             "sin"   :   OperationType.unaryOperation(sin),
             "±"     :   OperationType.unaryOperation({-$0}),
             "%"     :   OperationType.unaryOperation({$0 * 0.01}),
+            "ln"    :   OperationType.unaryOperation(log),
+            "x!"    :   OperationType.unaryOperation({
+                guard Int($0) != 0 else { return 0}
+                return Double((1...Int($0)).reduce(1, *))}),
             
             //BinaryOperations
             
@@ -82,10 +88,12 @@ struct CalculatorBrain {
                 }
             case .binaryOperation(let function):
                 if accumulator != nil {
+                    resultIsPending = true
                     pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
                     accumulator = nil
                 }
             case .equals:
+                resultIsPending = true
                 performPendingBinaryOperation()
             }
         }

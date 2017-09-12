@@ -2,20 +2,16 @@
 
 import UIKit
 
-var f: (Double) -> Double
 
 
-//
-//f = sqrt
 
-func changeSign(operand: Double) -> Double {
-    return -operand
+func factorial (number: Int) -> Int {
+    
+    
+    return (1...number).reduce(1, *)
+    
+    
 }
 
-//let x = f(81)
 
-
-f = changeSign(operand:)
-
-
-let z = f(81)
+print(factorial(number: 5))
