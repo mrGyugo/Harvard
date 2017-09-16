@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var faceView: FaceView! {
+        didSet {
+            updateUI()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var expression = FacialExpression(eyes: .closed, mouth: .grin) {
+        didSet {
+            updateUI()
+        }
     }
-
-
+    private let mouthCurvatures = [FacialExpression.Mouth.grin: 0.5,
+                                   .frown: -1.0,
+                                   .smile: 1.0,
+                                   .neutral: 0.0,
+                                   .smirk: -0.5]
+    private func updateUI() {
+        switch expression.eyes {
+        case .open:
+            faceView?.eyesOpen = true
+        case .closed:
+            faceView?.eyesOpen = false
+        case .squinting:
+            faceView?.eyesOpen = false
+        }
+        faceView?.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
+    }
+    
 }
 
