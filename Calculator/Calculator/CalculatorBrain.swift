@@ -14,10 +14,27 @@ struct CalculatorBrain {
     private var resultIsPending: Bool = false
     private var mainTuple: (accumulator: Double?, description: String?)
     
+    var randomNumber: Double {
+        get {
+            let number = arc4random() % 100
+            let result = Double(number) / 100
+            return result
+        }
+    }
+    
     //Установить оперант
     mutating func setOperand(_ operand: Double) {
         mainTuple = (operand, String(operand))
     }
+    
+    
+    
+    func   setOperand (variable named: String) {
+        
+        
+        
+    }
+    
     
     //Enum
     private enum OperationType {
@@ -102,7 +119,6 @@ struct CalculatorBrain {
         }
     }
     
-    
     mutating func allClear () {
         mainTuple.accumulator = nil
         mainTuple.description = nil
@@ -112,10 +128,10 @@ struct CalculatorBrain {
     //Result
     var result: (accumulator:Double? , description: String?) {
         get {
-            if resultIsPending {
-                return (mainTuple.accumulator, "\(mainTuple.description!) ...")
+            if mainTuple.description != nil && resultIsPending {
+                return (mainTuple.accumulator, "\(mainTuple.description ?? "") ...")
             } else {
-                return (mainTuple.accumulator, "\(mainTuple.description!) =")
+                return (mainTuple.accumulator, "\(mainTuple.description ?? "") =")
             }
         }
     }

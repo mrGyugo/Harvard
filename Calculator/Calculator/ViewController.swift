@@ -22,7 +22,13 @@ class ViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var display: UILabel! {
+        didSet {
+            if let x = display?.text {
+                print(x)
+            }
+        }
+    }
     @IBOutlet weak var displayHistory: UILabel!
     
     var userIsInTheMiddleOfTyping: Bool = false
@@ -50,6 +56,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func operand(_ sender: UIButton) {
+        
+    }
+
+    
+    
     @IBAction func allClear(_ sender: Any) {
         userIsInTheMiddleOfTyping = false
         display.text = "0"
@@ -67,7 +79,6 @@ class ViewController: UIViewController {
            brain.performOperation(mathematicalSymbol)
         }
         
-        
         if let result = brain.result.accumulator {
             displayValue = result
         }
@@ -77,18 +88,41 @@ class ViewController: UIViewController {
         }
         
     }
+    
+
+    @IBAction func deleteDigit(_ sender: UIButton) {
+        if display.text!.characters.count >= 2 {
+            display.text = display.text?.substring(to: display.text!.index(before: display.text!.endIndex))
+        } else {
+            display.text = "0"
+            userIsInTheMiddleOfTyping = false
+        }
+        
+    }
 
     var displayValue: Double {
         set {
-            display.text! = String(newValue)
+            display.text! = changeString(String(newValue))
         }
         get {
             return Double(display.text!)!
         }
     }
     
-
-
-
+    @IBAction func actionRendom(_ sender: UIButton) {
+        display.text = String(brain.randomNumber)
+        userIsInTheMiddleOfTyping = true
+    }
+    
+    private func changeString (_ stringNumber: String) -> String {
+        if let tempNumber = Double(stringNumber) {
+            let formatter = NumberFormatter()
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 4
+            return formatter.string(from: NSNumber(value: tempNumber))!
+        }
+        return stringNumber
+    }
+    
 }
 
