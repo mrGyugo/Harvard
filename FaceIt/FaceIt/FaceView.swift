@@ -12,11 +12,11 @@ import UIKit
 class FaceView: UIView {
     
     
-    @IBInspectable var scale: CGFloat = 0.9
-    @IBInspectable var eyesOpen: Bool = true
-    @IBInspectable var mouthCurvature: Double = -0.2
-    @IBInspectable var lineWidth: CGFloat = 5.0
-    @IBInspectable var color: UIColor = UIColor.blue
+    @IBInspectable var scale: CGFloat = 0.9 { didSet { setNeedsDisplay() }}
+    @IBInspectable var eyesOpen: Bool = true { didSet { setNeedsDisplay() }}
+    @IBInspectable var mouthCurvature: Double = -0.2 { didSet { setNeedsDisplay() }}
+    @IBInspectable var lineWidth: CGFloat = 5.0 { didSet { setNeedsDisplay() }}
+    @IBInspectable var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() }}
     
     
     
@@ -118,6 +118,22 @@ class FaceView: UIView {
         static let skullRadiusToMouthWidth:     CGFloat = 1
         static let skullRadiusToMouthHeight:    CGFloat = 3
         static let skullRadiusToMouthOffset:    CGFloat = 3
+        
+    }
+    
+    
+    
+    //Gesters actions
+    
+    func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer) {
+        
+        switch pinchRecognizer.state {
+        case .changed, .ended:
+            scale *= pinchRecognizer.scale
+            pinchRecognizer.scale = 1
+        default:
+            break
+        }
         
     }
     

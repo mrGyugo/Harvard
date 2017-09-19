@@ -2,127 +2,122 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by Mac_Work on 18.08.17.
-//  Copyright © 2017 ZebkaLab. All rights reserved.
+//  Created by Tatiana Kornilova on 3/8/17.
+//  All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var allButtons: [UIButton]!
-    
-    override func loadView() {
-        super.loadView()
-        
-        for button in allButtons {
-            button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.darkGray.cgColor
-        }
-    }
-    
-    
-    @IBOutlet weak var display: UILabel! {
+    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var history: UILabel!
+    @IBOutlet weak var tochka: UIButton!{
         didSet {
-            if let x = display?.text {
-                print(x)
-            }
+            tochka.setTitle(decimalSeparator, for: UIControlState())
         }
     }
-    @IBOutlet weak var displayHistory: UILabel!
     
-    var userIsInTheMiddleOfTyping: Bool = false
+    @IBOutlet weak var displayM: UILabel!
     
-    private var brain = CalculatorBrain()
-
-
+    let decimalSeparator = formatter.decimalSeparator ?? "."
+    var userInTheMiddleOfTyping = false
+    
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
-        
-        if userIsInTheMiddleOfTyping {
-            
-            if digit != "." || !(display.text?.contains("."))! {
-                let textCurrentlyInDisplay = display.text!
+        if userInTheMiddleOfTyping {
+            let textCurrentlyInDisplay = display.text!
+            if (digit != decimalSeparator) || !(textCurrentlyInDisplay.contains(decimalSeparator)) {
                 display.text = textCurrentlyInDisplay + digit
             }
         } else {
             display.text = digit
-            userIsInTheMiddleOfTyping = true
+            userInTheMiddleOfTyping = true
         }
-        
-        if display.text! == "." {
-            display.text = "0."
-        }
-        
     }
     
-    @IBAction func operand(_ sender: UIButton) {
-        
-    }
-
-    
-    
-    @IBAction func allClear(_ sender: Any) {
-        userIsInTheMiddleOfTyping = false
-        display.text = "0"
-        displayHistory.text = ""
-        brain.allClear()
-    }
-
-    @IBAction func perfomOperation(_ sender: UIButton) {
-        
-        if userIsInTheMiddleOfTyping {
-            brain.setOperand(displayValue)
-            userIsInTheMiddleOfTyping = false
-        }
-        if let mathematicalSymbol = sender.currentTitle {
-           brain.performOperation(mathematicalSymbol)
-        }
-        
-        if let result = brain.result.accumulator {
-            displayValue = result
-        }
-        
-        if let historyResult = brain.result.description {
-            displayHistory.text = historyResult
-        }
-        
-    }
-    
-
-    @IBAction func deleteDigit(_ sender: UIButton) {
-        if display.text!.characters.count >= 2 {
-            display.text = display.text?.substring(to: display.text!.index(before: display.text!.endIndex))
-        } else {
-            display.text = "0"
-            userIsInTheMiddleOfTyping = false
-        }
-        
-    }
-
-    var displayValue: Double {
-        set {
-            display.text! = changeString(String(newValue))
-        }
+    var displayValue: Double? {
         get {
-            return Double(display.text!)!
+            if let text = display.text, let value = Double(text){
+                return value
+            }
+            return nil
+        }
+        set {
+            if let value = newValue {
+                display.text = formatter.string(from: NSNumber(value:value))
+            }
         }
     }
     
-    @IBAction func actionRendom(_ sender: UIButton) {
-        display.text = String(brain.randomNumber)
-        userIsInTheMiddleOfTyping = true
-    }
-    
-    private func changeString (_ stringNumber: String) -> String {
-        if let tempNumber = Double(stringNumber) {
-            let formatter = NumberFormatter()
-            formatter.minimumFractionDigits = 0
-            formatter.maximumFractionDigits = 4
-            return formatter.string(from: NSNumber(value: tempNumber))!
+    var displayResult: (result: Double?, isPending: Bool,
+                       description: String, error: String?) = (nil, false," ", nil){
+        
+        // Наблюдатель Свойства модифицирует три IBOutlet метки
+        didSet {
+            switch displayResult {
+                case (nil, _, " ", nil) : displayValue = 0
+                case (let result, _,_,nil): displayValue = result
+                case (_, _,_,let error): display.text = error!
+            }
+            
+            history.text = displayResult.description != " " ?
+                    displayResult.description + (displayResult.isPending ? " …" : " =") : " "
+        //    print ("description = NN\(displayResult.description)NN")
+            displayM.text = formatter.string(from: NSNumber(value:variableValues["M"] ?? 0))
         }
-        return stringNumber
     }
     
+    // MARK: - Model
+    
+    private var brain = CalculatorBrain ()
+    private var variableValues = [String: Double]()
+    
+    @IBAction func performOPeration(_ sender: UIButton) {
+        if userInTheMiddleOfTyping {
+            if let value = displayValue{
+                brain.setOperand(value)
+            }
+            userInTheMiddleOfTyping = false
+        }
+        if  let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        displayResult = brain.evaluate(using: variableValues)
+    }
+    
+    @IBAction func setM(_ sender: UIButton) {
+        userInTheMiddleOfTyping = false
+        let symbol = String((sender.currentTitle!).characters.dropFirst())
+        
+        variableValues[symbol] = displayValue
+        displayResult = brain.evaluate(using: variableValues)
+    }
+    
+    @IBAction func pushM(_ sender: UIButton) {
+        brain.setOperand(variable: sender.currentTitle!)
+        displayResult = brain.evaluate(using: variableValues)
+    }
+    
+    @IBAction func clearAll(_ sender: UIButton) {
+        userInTheMiddleOfTyping = false
+        brain.clear()
+        variableValues = [:]
+        displayResult = brain.evaluate()
+    }
+    
+    @IBAction func backspace(_ sender: UIButton) {
+        if userInTheMiddleOfTyping {
+            guard !display.text!.isEmpty else { return }
+            display.text = String (display.text!.characters.dropLast())
+            if display.text!.isEmpty{
+                userInTheMiddleOfTyping = false
+                displayResult = brain.evaluate(using: variableValues)
+            }
+        } else {
+            brain.undo()
+            displayResult = brain.evaluate(using: variableValues)
+            
+        }
+    }
 }
-
