@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Light.otf">
+            <string>SFUIText-Light</string>
+        </array>
+        <array key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+        <array key="SFUIText-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="441" id="KGk-i7-Jjw" customClass="DiaposonSearchViewCell" customModule="Odigo_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="440.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я ТУТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWE-fN-Zy7">
+                        <rect key="frame" x="20" y="9" width="280" height="15"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI  Text" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДИАПОЗОН ПОИСКА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-9G-0gY">
+                        <rect key="frame" x="20" y="92" width="280" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="mcf-Zs-9ew"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI  Text" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-PO-CRM">
+                        <rect key="frame" x="10" y="34" width="300" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="i7w-nn-bJV"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-3T-Sgc">
+                        <rect key="frame" x="10" y="81" width="300" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="n8j-Pt-q4S"/>
+                            <constraint firstAttribute="height" constant="1" id="x5U-wr-Fbu"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Россия, г. Сочи, ул. Виноградная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUw-lZ-rso">
+                        <rect key="frame" x="10" y="35" width="300" height="46"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-Ln-UJV">
+                        <rect key="frame" x="10" y="120" width="300" height="57"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsK-Oo-myA">
+                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="57"/>
+                                <color key="backgroundColor" red="0.78039215689999997" green="0.82745098039999998" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="LZp-M7-NhO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI  Text" pointSize="15"/>
+                                <state key="normal" title="100 м">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.29411764709999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionRangeButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xqs-qz-bUy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-W2-Y27">
+                                <rect key="frame" x="102.5" y="0.0" width="95" height="57"/>
+                                <color key="backgroundColor" red="0.78039215689999997" green="0.82745098039999998" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="l0x-cM-8TK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI  Text" pointSize="15"/>
+                                <state key="normal" title="10 км">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.29411764709999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionRangeButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pA1-8t-4Dj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q0-hK-TD7">
+                                <rect key="frame" x="205.5" y="0.0" width="94.5" height="57"/>
+                                <color key="backgroundColor" red="0.78039215689999997" green="0.82745098039999998" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="RUD-MP-Oaj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI  Text" pointSize="15"/>
+                                <state key="normal" title="500 км">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.29411764709999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionRangeButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KAP-dD-X6V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3We-xs-c7C">
+                        <rect key="frame" x="10" y="185" width="300" height="57"/>
+                        <color key="backgroundColor" red="0.38431372549019605" green="0.45490196078431372" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="0Ss-ti-vo2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI  Text" pointSize="15"/>
+                        <state key="normal" title="ПЛАНЕТА ЗЕМЛЯ">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="actionRangeButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="izl-Jf-ILa"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztQ-pJ-2hE">
+                        <rect key="frame" x="10" y="250" width="300" height="57"/>
+                        <color key="backgroundColor" red="0.78039215689999997" green="0.82745098039999998" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="uBc-nI-WmP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI  Text" pointSize="15"/>
+                        <state key="normal" title="ЯЗЫК ОБЩЕНИЯ">
+                            <color key="titleColor" red="0.22352941179999999" green="0.29411764709999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="chooseLanguage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bbD-qg-mAq"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русский" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvj-P8-MW0">
+                        <rect key="frame" x="10" y="313" width="300" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="6mh-hT-XFK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="12"/>
+                        <color key="textColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас онлайн более 13,847 человек" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSb-po-2kh">
+                        <rect key="frame" x="10" y="399" width="300" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="bm8-Jr-6fL"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="n28-MU-EsS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ищут собеседника 426 человек" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp3-hh-0BH">
+                        <rect key="frame" x="10" y="417" width="300" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="DkO-kZ-mwH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1N-zu-O3q">
+                        <rect key="frame" x="10" y="336" width="300" height="57"/>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.6705882352941176" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="acn-hq-kky"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="17"/>
+                        <state key="normal" title="ИСКАТЬ СОБЕСЕДНИКА">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="serchInterlocutor:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i09-tZ-S3V"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.14117647059999999" green="0.25098039220000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="yWE-fN-Zy7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2KW-cG-hlz"/>
+                    <constraint firstItem="3We-xs-c7C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4u6-Rf-8BY"/>
+                    <constraint firstAttribute="trailing" secondItem="EhA-Ln-UJV" secondAttribute="trailing" constant="10" id="4w4-QF-dNd"/>
+                    <constraint firstItem="3We-xs-c7C" firstAttribute="top" secondItem="EhA-Ln-UJV" secondAttribute="bottom" constant="8" id="7PX-LR-wpU"/>
+                    <constraint firstItem="KPa-9G-0gY" firstAttribute="top" secondItem="fZz-3T-Sgc" secondAttribute="bottom" constant="10" id="7Yl-V6-PAR"/>
+                    <constraint firstItem="yWE-fN-Zy7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="8qd-c5-3Vs"/>
+                    <constraint firstAttribute="trailing" secondItem="3We-xs-c7C" secondAttribute="trailing" constant="10" id="DTR-6U-Kqn"/>
+                    <constraint firstAttribute="trailing" secondItem="VqU-PO-CRM" secondAttribute="trailing" constant="10" id="HhO-Dv-JVo"/>
+                    <constraint firstAttribute="trailing" secondItem="ztQ-pJ-2hE" secondAttribute="trailing" constant="10" id="Hi0-lL-wAh"/>
+                    <constraint firstItem="gp3-hh-0BH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ivh-ku-Ju8"/>
+                    <constraint firstItem="fZz-3T-Sgc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="J7P-tF-dOz"/>
+                    <constraint firstItem="pUw-lZ-rso" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JXc-Be-0eI"/>
+                    <constraint firstAttribute="trailing" secondItem="XSb-po-2kh" secondAttribute="trailing" constant="10" id="MDF-Pn-qkf"/>
+                    <constraint firstItem="VqU-PO-CRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MhE-Wn-bWg"/>
+                    <constraint firstAttribute="trailing" secondItem="fZz-3T-Sgc" secondAttribute="trailing" constant="10" id="NQ9-m6-QDu"/>
+                    <constraint firstItem="u1N-zu-O3q" firstAttribute="top" secondItem="xvj-P8-MW0" secondAttribute="bottom" constant="8" id="OCu-hO-wfo"/>
+                    <constraint firstItem="fZz-3T-Sgc" firstAttribute="top" secondItem="pUw-lZ-rso" secondAttribute="bottom" id="QzK-6I-pbr"/>
+                    <constraint firstItem="KPa-9G-0gY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ukm-2o-fMz"/>
+                    <constraint firstItem="VqU-PO-CRM" firstAttribute="top" secondItem="yWE-fN-Zy7" secondAttribute="bottom" constant="9.5" id="Xqd-hX-Z9v"/>
+                    <constraint firstItem="fZz-3T-Sgc" firstAttribute="top" secondItem="VqU-PO-CRM" secondAttribute="bottom" constant="46" id="aMc-3B-43T"/>
+                    <constraint firstItem="xvj-P8-MW0" firstAttribute="top" secondItem="ztQ-pJ-2hE" secondAttribute="bottom" constant="6" id="aez-13-1xg"/>
+                    <constraint firstAttribute="bottom" secondItem="gp3-hh-0BH" secondAttribute="bottom" constant="11.5" id="aya-64-aIr"/>
+                    <constraint firstItem="XSb-po-2kh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="be4-kg-uCB"/>
+                    <constraint firstAttribute="trailing" secondItem="pUw-lZ-rso" secondAttribute="trailing" constant="10" id="c1s-lN-dua"/>
+                    <constraint firstAttribute="trailing" secondItem="u1N-zu-O3q" secondAttribute="trailing" constant="10" id="czh-kc-p0O"/>
+                    <constraint firstItem="ztQ-pJ-2hE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fej-Fh-Jop"/>
+                    <constraint firstItem="pUw-lZ-rso" firstAttribute="top" secondItem="VqU-PO-CRM" secondAttribute="bottom" id="gLk-ky-Stn"/>
+                    <constraint firstAttribute="trailing" secondItem="yWE-fN-Zy7" secondAttribute="trailing" constant="20" id="go0-0S-i9N"/>
+                    <constraint firstAttribute="trailing" secondItem="KPa-9G-0gY" secondAttribute="trailing" constant="20" id="h5y-V6-Mug"/>
+                    <constraint firstItem="u1N-zu-O3q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hpJ-sS-l52"/>
+                    <constraint firstItem="EhA-Ln-UJV" firstAttribute="top" secondItem="KPa-9G-0gY" secondAttribute="bottom" constant="10" id="jHY-1j-Ayc"/>
+                    <constraint firstItem="ztQ-pJ-2hE" firstAttribute="top" secondItem="3We-xs-c7C" secondAttribute="bottom" constant="8" id="jTj-tJ-tT5"/>
+                    <constraint firstAttribute="trailing" secondItem="xvj-P8-MW0" secondAttribute="trailing" constant="10" id="mQd-jX-ygt"/>
+                    <constraint firstAttribute="trailing" secondItem="gp3-hh-0BH" secondAttribute="trailing" constant="10" id="ro2-uG-Qs2"/>
+                    <constraint firstItem="xvj-P8-MW0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wAX-tX-mAo"/>
+                    <constraint firstItem="XSb-po-2kh" firstAttribute="top" secondItem="u1N-zu-O3q" secondAttribute="bottom" constant="6" id="wHi-iL-5id"/>
+                    <constraint firstItem="EhA-Ln-UJV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wdc-1U-Iel"/>
+                    <constraint firstItem="gp3-hh-0BH" firstAttribute="top" secondItem="XSb-po-2kh" secondAttribute="bottom" constant="6" id="yq8-Vw-0Nw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelLanguage" destination="xvj-P8-MW0" id="gZb-Cr-Tqn"/>
+                <outlet property="labelLocation" destination="pUw-lZ-rso" id="w4N-sr-LDF"/>
+                <outlet property="labelOnlineCount" destination="XSb-po-2kh" id="B4J-10-waW"/>
+                <outlet property="labelSearchCount" destination="gp3-hh-0BH" id="XXj-TX-ggt"/>
+                <outlet property="langueButton" destination="ztQ-pJ-2hE" id="z6r-4c-TMx"/>
+                <outletCollection property="arrayRangeButtons" destination="vsK-Oo-myA" collectionClass="NSMutableArray" id="6gd-CS-e1b"/>
+                <outletCollection property="arrayRangeButtons" destination="ROp-W2-Y27" collectionClass="NSMutableArray" id="yeV-Vs-E5r"/>
+                <outletCollection property="arrayRangeButtons" destination="7q0-hK-TD7" collectionClass="NSMutableArray" id="3CO-N6-LQr"/>
+                <outletCollection property="arrayRangeButtons" destination="3We-xs-c7C" collectionClass="NSMutableArray" id="fQl-Kt-H3t"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="250.5"/>
+        </tableViewCell>
+    </objects>
+</document>

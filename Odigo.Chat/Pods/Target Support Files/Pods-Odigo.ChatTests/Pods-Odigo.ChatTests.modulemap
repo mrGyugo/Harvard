@@ -1,0 +1,6 @@
+framework module Pods_Odigo_ChatTests {
+  umbrella header "Pods-Odigo.ChatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

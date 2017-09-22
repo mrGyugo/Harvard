@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VMSecondTutorialView" customModule="Odigo_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondViewFon" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-Xb-hPI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVR-nf-Eoa">
+                    <rect key="frame" x="25" y="45" width="270" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="kgK-mq-Jm7"/>
+                    </constraints>
+                    <string key="text">Автопоиск
+собеседника</string>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-Ys-pV7">
+                    <rect key="frame" x="50" y="123" width="221" height="322.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondTutorialMainImage" translatesAutoresizingMaskIntoConstraints="NO" id="D3T-uh-74X">
+                            <rect key="frame" x="0.0" y="0.0" width="221" height="221"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="D3T-uh-74X" secondAttribute="height" multiplier="1:1" id="jgu-dh-qvk"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIx-OR-2B2">
+                            <rect key="frame" x="0.0" y="241" width="221" height="81.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="221" id="nmw-ZE-pXw"/>
+                            </constraints>
+                            <string key="text">Система сама подберет
+вам собеседника рядом
+с вами или в любой
+точке земли</string>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="D3T-uh-74X" firstAttribute="leading" secondItem="HGT-Ys-pV7" secondAttribute="leading" id="OfP-JB-oeL"/>
+                        <constraint firstAttribute="trailing" secondItem="D3T-uh-74X" secondAttribute="trailing" id="vif-N1-yrc"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mW-5J-iRj">
+                    <rect key="frame" x="8" y="502" width="304" height="57"/>
+                    <state key="normal" image="tutorialButtonImage"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HGT-Ys-pV7" firstAttribute="centerY" secondItem="8kS-Xb-hPI" secondAttribute="centerY" id="FQb-pX-89c"/>
+                <constraint firstItem="8kS-Xb-hPI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hlg-Wa-zXD"/>
+                <constraint firstAttribute="bottom" secondItem="8kS-Xb-hPI" secondAttribute="bottom" id="Hty-sS-szs"/>
+                <constraint firstItem="lVR-nf-Eoa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="JLB-af-cne"/>
+                <constraint firstItem="HGT-Ys-pV7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="SKP-K0-YuL"/>
+                <constraint firstItem="9mW-5J-iRj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="VzA-1i-qXR"/>
+                <constraint firstAttribute="bottom" secondItem="9mW-5J-iRj" secondAttribute="bottom" constant="9" id="Z1u-8A-HSJ"/>
+                <constraint firstAttribute="trailing" secondItem="HGT-Ys-pV7" secondAttribute="trailing" constant="49" id="Zhj-5o-9oc"/>
+                <constraint firstAttribute="trailing" secondItem="8kS-Xb-hPI" secondAttribute="trailing" id="aVw-R3-Ccl"/>
+                <constraint firstItem="8kS-Xb-hPI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bWo-G9-fak"/>
+                <constraint firstItem="lVR-nf-Eoa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lWU-9Y-Xgu"/>
+                <constraint firstAttribute="trailing" secondItem="9mW-5J-iRj" secondAttribute="trailing" constant="8" id="oeN-Mm-3w8"/>
+            </constraints>
+            <connections>
+                <outlet property="buttonBegin" destination="9mW-5J-iRj" id="dS8-SW-4a5"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="secondTutorialMainImage" width="550" height="533"/>
+        <image name="secondViewFon" width="640" height="1136"/>
+        <image name="tutorialButtonImage" width="304" height="57"/>
+    </resources>
+</document>

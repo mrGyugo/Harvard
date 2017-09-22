@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oU3-6Y-wZK">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="XG5-2C-Nso">
+            <objects>
+                <viewController storyboardIdentifier="VMBaseViewController" id="09m-b7-Uec" customClass="VMBaseViewController" customModule="Odigo_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qQF-F1-oLV"/>
+                        <viewControllerLayoutGuide type="bottom" id="XEY-IB-XF5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6Q-lv-WD9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBn-kx-86l">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-1j-4iD" customClass="VMHeaderView" customModule="Odigo_Chat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.60784313729999995" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CtU-G7-UrV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dqL-1j-4iD" secondAttribute="trailing" id="3rI-Ah-YP8"/>
+                            <constraint firstItem="SBn-kx-86l" firstAttribute="top" secondItem="K6Q-lv-WD9" secondAttribute="top" id="Mlf-n8-7aL"/>
+                            <constraint firstItem="XEY-IB-XF5" firstAttribute="top" secondItem="SBn-kx-86l" secondAttribute="bottom" id="R9s-td-oxm"/>
+                            <constraint firstAttribute="trailing" secondItem="SBn-kx-86l" secondAttribute="trailing" id="Uuu-ms-riq"/>
+                            <constraint firstItem="dqL-1j-4iD" firstAttribute="leading" secondItem="K6Q-lv-WD9" secondAttribute="leading" id="XHV-Xq-Ije"/>
+                            <constraint firstItem="dqL-1j-4iD" firstAttribute="top" secondItem="K6Q-lv-WD9" secondAttribute="top" id="hyx-kL-n9F"/>
+                            <constraint firstItem="SBn-kx-86l" firstAttribute="leading" secondItem="K6Q-lv-WD9" secondAttribute="leading" id="qvC-yS-C1R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nc6-uw-cFQ"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="headerView" destination="dqL-1j-4iD" id="gXu-Cg-mhO"/>
+                        <outlet property="mainView" destination="SBn-kx-86l" id="GmF-1e-7MC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wha-OT-0vZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.25" y="-1730.2816901408451"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="c5f-NE-R3c">
+            <objects>
+                <viewController storyboardIdentifier="VMTutorialViewController" id="aEQ-BX-xQ0" customClass="VMTutorialViewController" customModule="Odigo_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KMM-ER-ASY"/>
+                        <viewControllerLayoutGuide type="bottom" id="PD1-ar-xQU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Oe-32-OfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="coU-mn-IZo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aEQ-BX-xQ0" id="ONu-Fr-SD7"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-B2-oOv">
+                                <rect key="frame" x="143" y="470" width="35" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="XRs-96-c98"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.32156862745098036" green="0.31764705882352939" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yKT-B2-oOv" secondAttribute="trailing" constant="142.5" id="I61-E4-gZd"/>
+                            <constraint firstItem="PD1-ar-xQU" firstAttribute="top" secondItem="yKT-B2-oOv" secondAttribute="bottom" constant="61" id="OSP-K3-UnM"/>
+                            <constraint firstItem="yKT-B2-oOv" firstAttribute="leading" secondItem="8Oe-32-OfQ" secondAttribute="leading" constant="142.5" id="QJI-8P-WPv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="yKT-B2-oOv" id="y1h-qI-ufG"/>
+                        <outlet property="slideScrollView" destination="coU-mn-IZo" id="KfK-Or-6Pg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8y-Ro-3uH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.75" y="-1730.2816901408451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ovl-pW-O1C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oU3-6Y-wZK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JIE-qs-aje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="09m-b7-Uec" kind="relationship" relationship="rootViewController" id="XhI-vZ-zfl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GON-d9-7a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1386" y="-1730"/>
+        </scene>
+    </scenes>
+</document>
