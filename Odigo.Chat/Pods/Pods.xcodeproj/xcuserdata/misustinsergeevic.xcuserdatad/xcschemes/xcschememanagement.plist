@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>Sodium.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -74,10 +79,20 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>lottie-ios.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>023A39B63ED45262EF3B58B0C5682AB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02443A44C8704C72305D0610D78776FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>15F7FBD0D021B0AD29C169080071DBB0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FC352799585DF37803F8C936A6ABF07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2713900BF6F7B2E91102C85333FE91B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>346029348B456AE1D5C7EE543EA205B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E94DFC42A6528D33550D26E8AF8FE12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,6 +133,11 @@
 			<true/>
 		</dict>
 		<key>53B627F914A21C66255A2FB573BF43C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>548550EBB45F5C2E71030828E2561152</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,6 +172,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6F8D133FD198EA715B170DCA928D6EA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>978A447F57E812AEE5D676FF361F1416</key>
 		<dict>
 			<key>primary</key>
@@ -143,6 +188,21 @@
 			<true/>
 		</dict>
 		<key>A5B1BAF313CD3FE36A1CDE10629BF961</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5C29066B32BC3DBA7CD2538B4ED3A47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5CD2E146D7C884E08DD5A7D723A3B75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF420AFD2A980F60CEA321E01C8F7AC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
