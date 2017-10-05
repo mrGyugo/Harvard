@@ -58,7 +58,7 @@
 		E28B31B71EC075C900A695A9 /* VMThirdTutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28B31B61EC075C900A695A9 /* VMThirdTutorialView.xib */; };
 		E28B31B91EC075EB00A695A9 /* VMThirdTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B31B81EC075EB00A695A9 /* VMThirdTutorialView.swift */; };
 		E28B31BB1EC08E4800A695A9 /* VMOtherMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B31BA1EC08E4800A695A9 /* VMOtherMethods.swift */; };
-		E2A2EDB41F6CFAE40073673F /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = E2A2EDB31F6CFAE40073673F /* demo.json */; };
+		E2A2EDB41F6CFAE40073673F /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E2A2EDB31F6CFAE40073673F /* animation.json */; };
 		E2A47A601EC9E39700D2D404 /* VMMainVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A47A5E1EC9E39700D2D404 /* VMMainVController.swift */; };
 		E2A47A611EC9E39700D2D404 /* VMMainVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A47A5F1EC9E39700D2D404 /* VMMainVController.xib */; };
 		E2A47A6C1EC9E55300D2D404 /* VMDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A47A6A1EC9E55300D2D404 /* VMDialogViewController.swift */; };
@@ -166,7 +166,7 @@
 		E28B31B61EC075C900A695A9 /* VMThirdTutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMThirdTutorialView.xib; sourceTree = "<group>"; };
 		E28B31B81EC075EB00A695A9 /* VMThirdTutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMThirdTutorialView.swift; sourceTree = "<group>"; };
 		E28B31BA1EC08E4800A695A9 /* VMOtherMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMOtherMethods.swift; sourceTree = "<group>"; };
-		E2A2EDB31F6CFAE40073673F /* demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
+		E2A2EDB31F6CFAE40073673F /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		E2A47A5E1EC9E39700D2D404 /* VMMainVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMMainVController.swift; sourceTree = "<group>"; };
 		E2A47A5F1EC9E39700D2D404 /* VMMainVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMMainVController.xib; sourceTree = "<group>"; };
 		E2A47A6A1EC9E55300D2D404 /* VMDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMDialogViewController.swift; sourceTree = "<group>"; };
@@ -522,7 +522,7 @@
 		E2A47A5C1EC9E32800D2D404 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
-				E2A2EDB31F6CFAE40073673F /* demo.json */,
+				E2A2EDB31F6CFAE40073673F /* animation.json */,
 				E2A47A6A1EC9E55300D2D404 /* VMDialogViewController.swift */,
 				E2A47A6B1EC9E55300D2D404 /* VMDialogViewController.xib */,
 			);
@@ -703,7 +703,7 @@
 				E2160BBB1F04F7E10014DEAB /* LanguageCell.xib in Resources */,
 				E2EFD4FA1EEFFDCD00F1AD14 /* 01-01.jpg in Resources */,
 				E2EFD5021EF0255700F1AD14 /* SearchCellViewCell.xib in Resources */,
-				E2A2EDB41F6CFAE40073673F /* demo.json in Resources */,
+				E2A2EDB41F6CFAE40073673F /* animation.json in Resources */,
 				E2A47A6D1EC9E55300D2D404 /* VMDialogViewController.xib in Resources */,
 				E23263991EBC836600CA2D08 /* SFUIText-Light.otf in Resources */,
 				E2EFD4F41EEFE53E00F1AD14 /* HeaderViewCell.xib in Resources */,

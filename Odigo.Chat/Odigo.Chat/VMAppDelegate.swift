@@ -25,9 +25,6 @@ class VMAppDelegate: UIResponder, UIApplicationDelegate {
         
         MamagerPersonalData.loadAvatar()
         MamagerPersonalData.loadSearchParams()
-        
-        
-
 
 //        requests.delegate = self
         //ConnectMeteor-------

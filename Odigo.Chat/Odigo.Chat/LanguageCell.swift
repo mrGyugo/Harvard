@@ -65,7 +65,6 @@ class LanguageCell: UITableViewCell {
         delegate.didPressButton(button: self.buttonCell)
     }
     
-    
     public func updateCheckMark() {
         if self.isCkeckt {
            checkMarkImage.alpha = 1
