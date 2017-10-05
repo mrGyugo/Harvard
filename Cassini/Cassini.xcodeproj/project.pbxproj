@@ -316,6 +316,7 @@
 				E26E556B1F729ED60086875F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
