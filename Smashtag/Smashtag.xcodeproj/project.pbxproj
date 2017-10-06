@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E2FA70D51F8796650024DEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA70D41F8796650024DEB4 /* AppDelegate.swift */; };
-		E2FA70D71F8796650024DEB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA70D61F8796650024DEB4 /* ViewController.swift */; };
 		E2FA70DA1F8796650024DEB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FA70D81F8796650024DEB4 /* Main.storyboard */; };
 		E2FA70DC1F8796650024DEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FA70DB1F8796650024DEB4 /* Assets.xcassets */; };
 		E2FA70DF1F8796650024DEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FA70DD1F8796650024DEB4 /* LaunchScreen.storyboard */; };
 		E2FA70EA1F8796650024DEB4 /* SmashtagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA70E91F8796650024DEB4 /* SmashtagTests.swift */; };
 		E2FA70F51F8796650024DEB4 /* SmashtagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA70F41F8796650024DEB4 /* SmashtagUITests.swift */; };
+		E2FA71041F87B2B90024DEB4 /* TweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA71031F87B2B90024DEB4 /* TweetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		E2FA70D11F8796650024DEB4 /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA70D41F8796650024DEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2FA70D61F8796650024DEB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2FA70D91F8796650024DEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2FA70DB1F8796650024DEB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FA70DE1F8796650024DEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		E2FA70F01F8796650024DEB4 /* SmashtagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashtagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA70F41F8796650024DEB4 /* SmashtagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashtagUITests.swift; sourceTree = "<group>"; };
 		E2FA70F61F8796650024DEB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2FA71031F87B2B90024DEB4 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +97,9 @@
 		E2FA70D31F8796650024DEB4 /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
-				E2FA70D41F8796650024DEB4 /* AppDelegate.swift */,
-				E2FA70D61F8796650024DEB4 /* ViewController.swift */,
+				E2FA71021F87B2450024DEB4 /* Suporting Files */,
 				E2FA70D81F8796650024DEB4 /* Main.storyboard */,
-				E2FA70DB1F8796650024DEB4 /* Assets.xcassets */,
-				E2FA70DD1F8796650024DEB4 /* LaunchScreen.storyboard */,
+				E2FA71031F87B2B90024DEB4 /* TweetTableViewController.swift */,
 				E2FA70E01F8796650024DEB4 /* Info.plist */,
 			);
 			path = Smashtag;
@@ -123,6 +121,16 @@
 				E2FA70F61F8796650024DEB4 /* Info.plist */,
 			);
 			path = SmashtagUITests;
+			sourceTree = "<group>";
+		};
+		E2FA71021F87B2450024DEB4 /* Suporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA70D41F8796650024DEB4 /* AppDelegate.swift */,
+				E2FA70DB1F8796650024DEB4 /* Assets.xcassets */,
+				E2FA70DD1F8796650024DEB4 /* LaunchScreen.storyboard */,
+			);
+			name = "Suporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FA70D71F8796650024DEB4 /* ViewController.swift in Sources */,
 				E2FA70D51F8796650024DEB4 /* AppDelegate.swift in Sources */,
+				E2FA71041F87B2B90024DEB4 /* TweetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
