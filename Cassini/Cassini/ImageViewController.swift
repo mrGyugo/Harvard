@@ -44,7 +44,7 @@ class ImageViewController: UIViewController {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView?.contentSize = imageView.frame.size
-            spinner.stopAnimating()
+            spinner?.stopAnimating()
         }
     }
     
