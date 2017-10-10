@@ -37,15 +37,14 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     private func searchForTweets() {
         if let request = lastTwitterRequest?.newer ?? twitterRequest() {
             lastTwitterRequest = request
-            request.fetchTweets({ [weak self] newTweets in
+            request.fetchTweets{ [weak self] newTweets in
                 DispatchQueue.main.async {
                     if request == self?.lastTwitterRequest {
-                        self?.tweets.insert(newTweets, at: 0)
-                        self?.tableView.insertSections([0], with: .fade)
+                       self?.insertTweets(newTweets)
                     }
                     self?.refreshControl?.endRefreshing()
                 }
-            })
+            }
         } else {
             self.refreshControl?.endRefreshing()
         }
@@ -61,18 +60,20 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func refresh(_ sender: UIRefreshControl) {
         searchForTweets()
     }
+    
+    func insertTweets(_ newTweets:[Twitter.Tweet]) {
+        self.tweets.insert(newTweets, at: 0)
+        self.tableView.insertSections([0], with: .fade)
+    }
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        searchText = "#stanford"
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,10 +95,7 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tweet", for: indexPath)
 
-        let tweet: Tweet = tweets[indexPath.section][indexPath.row]
-//
-//        cell.textLabel?.text = tweet.text
-//        cell.detailTextLabel?.text = tweet.user.name
+        let tweet: Twitter.Tweet = tweets[indexPath.section][indexPath.row]
         
         if let tweetCell = cell as? TweetTableViewCell {
             tweetCell.tweet = tweet
