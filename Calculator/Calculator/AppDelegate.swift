@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  MenuController
+//  Calculator
 //
-//  Created by Mac_Work on 22.09.17.
-//  Copyright © 2017 ZebkaLab. All rights reserved.
+//  Created by Tatiana Kornilova on 2/14/17.
+//  Copyright © 2017 Tatiana Kornilova. All rights reserved.
 //
 
 import UIKit
