@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E2CDC4931F90E74F007F1BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4921F90E74F007F1BC7 /* AppDelegate.swift */; };
-		E2CDC4951F90E74F007F1BC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4941F90E74F007F1BC7 /* ViewController.swift */; };
+		E2CDC4951F90E74F007F1BC7 /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4941F90E74F007F1BC7 /* AsteroidsViewController.swift */; };
 		E2CDC4981F90E74F007F1BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CDC4961F90E74F007F1BC7 /* Main.storyboard */; };
 		E2CDC49A1F90E74F007F1BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CDC4991F90E74F007F1BC7 /* Assets.xcassets */; };
 		E2CDC49D1F90E74F007F1BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CDC49B1F90E74F007F1BC7 /* LaunchScreen.storyboard */; };
+		E2CDC4A91F90E8C8007F1BC7 /* AsteroidFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4A51F90E8C8007F1BC7 /* AsteroidFieldView.swift */; };
+		E2CDC4AA1F90E8C8007F1BC7 /* SpaceshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4A61F90E8C8007F1BC7 /* SpaceshipView.swift */; };
+		E2CDC4AB1F90E8C8007F1BC7 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4A71F90E8C8007F1BC7 /* CoreGraphicsExtensions.swift */; };
+		E2CDC4AC1F90E8C8007F1BC7 /* AsteroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4A81F90E8C8007F1BC7 /* AsteroidView.swift */; };
+		E2CDC4AE1F90EEE7007F1BC7 /* AsteriodBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDC4AD1F90EEE7007F1BC7 /* AsteriodBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E2CDC48F1F90E74F007F1BC7 /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CDC4921F90E74F007F1BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2CDC4941F90E74F007F1BC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2CDC4941F90E74F007F1BC7 /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
 		E2CDC4971F90E74F007F1BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2CDC4991F90E74F007F1BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2CDC49C1F90E74F007F1BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2CDC49E1F90E74F007F1BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CDC4A51F90E8C8007F1BC7 /* AsteroidFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidFieldView.swift; sourceTree = "<group>"; };
+		E2CDC4A61F90E8C8007F1BC7 /* SpaceshipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceshipView.swift; sourceTree = "<group>"; };
+		E2CDC4A71F90E8C8007F1BC7 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		E2CDC4A81F90E8C8007F1BC7 /* AsteroidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidView.swift; sourceTree = "<group>"; };
+		E2CDC4AD1F90EEE7007F1BC7 /* AsteriodBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteriodBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		E2CDC4911F90E74F007F1BC7 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				E2CDC4921F90E74F007F1BC7 /* AppDelegate.swift */,
-				E2CDC4941F90E74F007F1BC7 /* ViewController.swift */,
 				E2CDC4961F90E74F007F1BC7 /* Main.storyboard */,
+				E2CDC4941F90E74F007F1BC7 /* AsteroidsViewController.swift */,
+				E2CDC4AD1F90EEE7007F1BC7 /* AsteriodBehavior.swift */,
+				E2CDC4A51F90E8C8007F1BC7 /* AsteroidFieldView.swift */,
 				E2CDC4991F90E74F007F1BC7 /* Assets.xcassets */,
+				E2CDC4A41F90E7D5007F1BC7 /* Supporting Files */,
+			);
+			path = Asteroids;
+			sourceTree = "<group>";
+		};
+		E2CDC4A41F90E7D5007F1BC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDC4A61F90E8C8007F1BC7 /* SpaceshipView.swift */,
+				E2CDC4A71F90E8C8007F1BC7 /* CoreGraphicsExtensions.swift */,
+				E2CDC4A81F90E8C8007F1BC7 /* AsteroidView.swift */,
+				E2CDC4921F90E74F007F1BC7 /* AppDelegate.swift */,
 				E2CDC49B1F90E74F007F1BC7 /* LaunchScreen.storyboard */,
 				E2CDC49E1F90E74F007F1BC7 /* Info.plist */,
 			);
-			path = Asteroids;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CDC4951F90E74F007F1BC7 /* ViewController.swift in Sources */,
+				E2CDC4951F90E74F007F1BC7 /* AsteroidsViewController.swift in Sources */,
+				E2CDC4AA1F90E8C8007F1BC7 /* SpaceshipView.swift in Sources */,
 				E2CDC4931F90E74F007F1BC7 /* AppDelegate.swift in Sources */,
+				E2CDC4AB1F90E8C8007F1BC7 /* CoreGraphicsExtensions.swift in Sources */,
+				E2CDC4A91F90E8C8007F1BC7 /* AsteroidFieldView.swift in Sources */,
+				E2CDC4AC1F90E8C8007F1BC7 /* AsteroidView.swift in Sources */,
+				E2CDC4AE1F90EEE7007F1BC7 /* AsteriodBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +332,7 @@
 				E2CDC4A31F90E74F007F1BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
