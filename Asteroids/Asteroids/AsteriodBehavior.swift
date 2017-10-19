@@ -11,15 +11,41 @@ import UIKit
 class AsteriodBehavior: UIDynamicBehavior {
     
     private var asteroids = [AsteroidView]()
+    private lazy var collider: UICollisionBehavior = {
+        let behavior = UICollisionBehavior()
+        behavior.collisionMode = .everything
+        behavior.translatesReferenceBoundsIntoBoundary = true
+        return behavior
+    }()
+    
+    private lazy var physics: UIDynamicItemBehavior = {
+        let behavior = UIDynamicItemBehavior()
+        behavior.elasticity = 1
+        behavior.allowsRotation = true
+        behavior.friction = 0
+        behavior.resistance = 0
+        return behavior
+    }()
+    
+    
+    override init() {
+        super.init()
+        addChildBehavior(collider)
+        addChildBehavior(physics)
+    }
     
     func addAsteroid(_ asteroid: AsteroidView) {
         asteroids.append(asteroid)
+        collider.addItem(asteroid)
+        physics.addItem(asteroid)
     }
     
     func removeAsteroid(_ asteroid: AsteroidView) {
         if let index = asteroids.index(of: asteroid) {
             asteroids.remove(at: index)
         }
+        collider.removeItem(asteroid)
+        collider.removeItem(asteroid)
     }
     
     

@@ -16,6 +16,12 @@ class AsteroidsViewController: UIViewController {
     private var asteroidBehavior = AsteriodBehavior()
     
     private lazy var animator: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.asteroidField)
+//    private lazy var collider: UICollisionBehavior = {
+//        let behavior = UICollisionBehavior()
+//        behavior.collisionMode = .everything
+//        behavior.translatesReferenceBoundsIntoBoundary = true
+//        return behavior
+//    }()
     
     
     // MARK: View Controller Lifecycle
